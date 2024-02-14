@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/bmv/static/css/main.73ec6c9a.css",
+    "main.js": "/bmv/static/js/main.1191c888.js",
+    "static/js/592.d249dc9a.chunk.js": "/bmv/static/js/592.d249dc9a.chunk.js",
+    "static/media/cute3.gif": "/bmv/static/media/cute3.a79cd8578821e927a15c.gif",
+    "static/media/cute2.gif": "/bmv/static/media/cute2.6c2f18b0afa9ca471ed1.gif",
+    "static/media/cute4.gif": "/bmv/static/media/cute4.c65039eecf13f947af49.gif",
+    "static/media/yes1.gif": "/bmv/static/media/yes1.ecf3aaecdd025652301c.gif",
+    "static/media/cute1.gif": "/bmv/static/media/cute1.6e8bb34eb6a4fe8e2372.gif",
+    "static/media/yes3.gif": "/bmv/static/media/yes3.fea6c7abf7b33c2c9aa1.gif",
+    "static/media/cute5.gif": "/bmv/static/media/cute5.8296979ef652baf44e30.gif",
+    "static/media/yes2.gif": "/bmv/static/media/yes2.16c01f39bda424c5f526.gif",
+    "index.html": "/bmv/index.html",
+    "main.73ec6c9a.css.map": "/bmv/static/css/main.73ec6c9a.css.map",
+    "main.1191c888.js.map": "/bmv/static/js/main.1191c888.js.map",
+    "592.d249dc9a.chunk.js.map": "/bmv/static/js/592.d249dc9a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.73ec6c9a.css",
+    "static/js/main.1191c888.js"
+  ]
+}
