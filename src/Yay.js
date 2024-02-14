@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import cuteYes1 from './img/yes1.gif';
 import cuteYes2 from './img/yes2.gif';
 import cuteYes3 from './img/yes3.gif';
+import Vplayer from './Vplayer';
 import './Yay.css';
 
 const alternateTexts = [
@@ -17,6 +18,7 @@ const Yay = () => {
   const [currentText, setCurrentText] = useState(alternateTexts[0]);
   const [cycleCount, setCycleCount] = useState(0);
   const [showVideoPlayer, setShowVideoPlayer] = useState(false);
+  const [showImage, setShowImage] = useState(true);
 
   useEffect(() => {
     const gifInterval = setInterval(() => {
@@ -49,30 +51,27 @@ const Yay = () => {
       }
 
       setCurrentText(alternateTexts[currentTextIndex]);
-    }, 26000);
+    }, 2600);
 
     return () => {
       clearInterval(gifInterval); // Cleanup on component unmount
     };
-  }, [cycleCount, currentTextIndex, currentText]); // Add dependencies to useEffect
+  }, [cycleCount, currentTextIndex, currentText]);
 
   const handleButtonClick = () => {
     setShowVideoPlayer(true);
+    setShowImage(false); // Hide the image when button is clicked
   };
 
   return (
     <div className="yay-container">
       <h1 className="pulse">{currentText}</h1>
-      <div className="image-container">
-        {showVideoPlayer ? (
-          <video width="400" height="300" controls>
-            <source src="/val.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        ) : (
+      {showImage && (
+        <div className="image-container">
           <img src={currentGif} alt="Cute Yes" className="animated-gif" />
-        )}
-      </div>
+        </div>
+      )}
+      {showVideoPlayer && <Vplayer videoSource="FAhjAUYKoB4" />}
       {!showVideoPlayer && <button onClick={handleButtonClick}>Click Me</button>}
     </div>
   );

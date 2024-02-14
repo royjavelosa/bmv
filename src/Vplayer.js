@@ -1,14 +1,20 @@
 // Vplayer.js
 import React from 'react';
 
-const Vplayer = () => {
+const Vplayer = ({ videoSource }) => {
+  const youtubeEmbedUrl = `https://www.youtube.com/embed/${videoSource}`;
+
   return (
-    <div>
-      {/* Your video player component code goes here */}
-      <video controls width="300" height="200">
-        <source src="./vid/val.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+    <div className="video-container">
+      <iframe
+        width="560"
+        height="315"
+        src={youtubeEmbedUrl}
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
     </div>
   );
 };
