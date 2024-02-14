@@ -1,38 +1,65 @@
 .App {
-  text-align: center;
+  /* ... your existing styles ... */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App h1.pulse {
+  animation: pulse 1.5s infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  background-color: #ffb6c1; /* Baby Pink color */
+  margin: 0; /* Remove default body margin */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.App h1 {
+  text-align: center; /* Center the header text */
+  margin-top: 20px; /* Add margin to the top of the header */
+}
+
+#cat-container {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  width: 40%;
+  margin-top: 20px; /* Add margin to the top of the cat container */
+}
+
+.teleport-button {
+  width: 100px; /* Replace with desired width */
+  height: 40px; /* Replace with desired height */
+  position: fixed; /* Required for transform: translate */
+  bottom: 10px;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  /* Transition for smoother animation */
+  transition: transform 0.5s ease;
+}
+
+.yes {
+  background-color: green;
   color: white;
+  left: calc(50% + 20px);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.no {
+  background-color: red;
+  color: white;
+  left: calc(50% - 120px);
 }
