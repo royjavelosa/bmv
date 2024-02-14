@@ -1,8 +1,7 @@
-// Vplayer.js
 import React from 'react';
 
 const Vplayer = ({ videoSource }) => {
-  const youtubeEmbedUrl = `https://www.youtube.com/embed/${videoSource}`;
+  const youtubeEmbedUrl = `https://www.youtube.com/embed/${videoSource}?autoplay=1`;
 
   return (
     <div className="video-container">
